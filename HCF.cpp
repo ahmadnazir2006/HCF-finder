@@ -1,15 +1,25 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 int main() {
-	 int numb1;
-	int numb2;
-	cin >> numb1>> numb2;
-	int i = 0;
-	while (numb2 != 0) {
-		int remainder = numb1%numb2;
-		numb1 = numb2;
-		numb2 = remainder;
+	int counter = 0;
+	int numb1, numb2, sum;
+	
+	cin >> numb1 >> numb2;
+	sum = numb1 + numb2;
+	int i = numb1 + 1;
+	while ( i >numb1&&i<numb2) {
+		
+		if (sum % i == 0) {
+			counter = counter + 1;
+			
+		}
+		i++;
+
+
 	}
-	cout << numb1;
+	
+	cout <<counter;
+	
 	return 0;
 }
